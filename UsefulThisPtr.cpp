@@ -1,28 +1,32 @@
 # include <iostream>
 using namespace std;
 
-class TwoNumber {
+class SelfRef {
 private:
-	int num1;
-	int num2;
+	int num;
 public:
-	TwoNumber(int num1, int num2) {
-		this->num1 = num1;
-		this->num2 = num2;
+	SelfRef(int n) : num(n) {
+		cout << "객체가 생성되었습니다! :) " << endl;
 	}
-	/*
-	TwoNumber (int num1, int num2)
-		: num1(num1), num2(num2) {}
-	*/
 
-	void ShowTwoNumber() {
-		cout << this->num1 << endl;
-		cout << this->num2 << endl;
+	SelfRef& Adder(int n) {
+		num = num + n;
+		return *this;
+	}
+
+	SelfRef& ShowTwoNumber() {
+		cout << num << endl;
+		return *this;
 	}
 };
 
 int main() {
-	TwoNumber two(2, 4);
-	two.ShowTwoNumber();
+	SelfRef obj(3);
+	SelfRef& ref = obj.Adder(2);
+
+	obj.ShowTwoNumber();
+	ref.ShowTwoNumber();
+
+	ref.Adder(1).ShowTwoNumber().Adder(2).ShowTwoNumber();
 	return 0;
 }
