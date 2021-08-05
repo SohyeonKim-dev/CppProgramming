@@ -1,3 +1,4 @@
+# define _CRT_SECURE_NO_WARNINGS
 # include <iostream>
 # include <cstring>
 using namespace std;
@@ -123,4 +124,8 @@ int main() {
 	( Derived class is a Base class )
 	( 자식 class is a 부모 class )
 
+	+ 비쥬얼 스튜디오 오류 해결! 
+	1. 프로젝트 -> 속성 -> 구성속성 => C/C++ => 언어 창에 있는 준수모드 아니오로 변경하면 오류 발생X!!
+		: strcpy에서 오류 발생
+	2. # define _CRT_SECURE_NO_WARNINGS 을 사용하면 해결된다.
 */
