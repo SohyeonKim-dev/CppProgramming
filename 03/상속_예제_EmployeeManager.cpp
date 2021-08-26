@@ -8,7 +8,7 @@ private:
 	char name[100];
 public:
 	Employee(char* name) {
-		strcpy(this->name, name);		// this Æ÷ÀÎÅÍ¸¦ È°¿ëÇÏ¿© Çö°´Ã¼ÀÇ ¸â¹ö¿Í ÀÔ·Â parameter¸¦ ±¸ºĞÇÔ.
+		strcpy(this->name, name);		// this í¬ì¸í„°ë¥¼ í™œìš©í•˜ì—¬ í˜„ê°ì²´ì˜ ë©¤ë²„ì™€ ì…ë ¥ parameterë¥¼ êµ¬ë¶„í•¨.
 	}
 
 	void ShowYourName() const {
@@ -29,7 +29,7 @@ public:
 	PermanentWorker(char* name, int money)
 		: Employee(name), salary(money){ }
 
-	int GetPay() const {				// ¾êµµ ÀÚµ¿À¸·Î virtual ÇÔ¼ö Àû¿ë?
+	int GetPay() const {				// ì–˜ë„ ìë™ìœ¼ë¡œ virtual í•¨ìˆ˜ ì ìš©?
 		return salary;
 	}
 
@@ -116,45 +116,45 @@ public:
 };
 
 int main() {
-	//Á÷¿ø °ü¸®¸¦ ¸ñÀûÀ¸·Î ¼³°èµÈ ÄÁÆ®·Ñ Å¬·¡½º °´Ã¼ »ı¼º 
+	//ì§ì› ê´€ë¦¬ë¥¼ ëª©ì ìœ¼ë¡œ ì„¤ê³„ëœ ì»¨íŠ¸ë¡¤ í´ë˜ìŠ¤ ê°ì²´ ìƒì„± 
 	EmployeeHandler handler;
 
-	// Á¤±ÔÁ÷ µî·Ï 
-	handler.AddEmployee(new PermanentWorker("±è¼ÒÇö", 10000));
-	handler.AddEmployee(new PermanentWorker("ºê·ÎÄİ¸®", 15000));
+	// ì •ê·œì§ ë“±ë¡ 
+	handler.AddEmployee(new PermanentWorker("ê¹€ì†Œí˜„", 10000));
+	handler.AddEmployee(new PermanentWorker("ë¸Œë¡œì½œë¦¬", 15000));
 
-	// ÀÓ½ÃÁ÷ µî·Ï
-	TemporaryWorker* alba = new TemporaryWorker("³ªºñ", 9200);
+	// ì„ì‹œì§ ë“±ë¡
+	TemporaryWorker* alba = new TemporaryWorker("ë‚˜ë¹„", 9200);
 	alba->AddWorkTime(5);
 	handler.AddEmployee(alba);
 
-	// ¿µ¾÷Á÷ µî·Ï 
-	SalesWorker* seller = new SalesWorker("È£¶ûÀÌ", 9000, 0.2);
+	// ì˜ì—…ì§ ë“±ë¡ 
+	SalesWorker* seller = new SalesWorker("í˜¸ë‘ì´", 9000, 0.2);
 	seller->AddSalesResult(7000);
 	handler.AddEmployee(seller);
 
-	// ÀÌ¹ø´Ş¿¡ Áö±ŞÇØ¾ß ÇÒ ±Ş¿©ÀÇ Á¤º¸ 
+	// ì´ë²ˆë‹¬ì— ì§€ê¸‰í•´ì•¼ í•  ê¸‰ì—¬ì˜ ì •ë³´ 
 	handler.ShowAllSalaryInfo();
 
-	// ÀÌ¹ø ´Ş¿¡ ÁöºÒÇØ¾ß ÇÒ ±İ¾×ÀÇ ÃÑÇÕ
+	// ì´ë²ˆ ë‹¬ì— ì§€ë¶ˆí•´ì•¼ í•  ê¸ˆì•¡ì˜ ì´í•©
 	handler.ShowTotalSalary();
 	return 0;
 }
 
 /*
-[½ÇÇà °á°ú]
+[ì‹¤í–‰ ê²°ê³¼]
 
-name: ±è¼ÒÇö
+name: ê¹€ì†Œí˜„
 salary: 10000
-name: ºê·ÎÄİ¸®
+name: ë¸Œë¡œì½œë¦¬
 salary: 15000
-name: ³ªºñ
+name: ë‚˜ë¹„
 salary: 46000
-name: È£¶ûÀÌ
+name: í˜¸ë‘ì´
 salary: 10400
 salary sum: 81400
 
-[½ÇÇà ÄÚµå ºĞ¼®] 
-1. °¡»óÇÔ¼ö(virtual function)ÀÇ µµÀÔ
+[ì‹¤í–‰ ì½”ë“œ ë¶„ì„] 
+1. ê°€ìƒí•¨ìˆ˜(virtual function)ì˜ ë„ì…
 
 */
