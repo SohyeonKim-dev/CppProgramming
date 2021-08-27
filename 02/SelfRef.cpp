@@ -6,7 +6,7 @@ private:
 	int num;
 public:
 	SelfRef(int n) : num(n) {
-		cout << "°´Ã¼°¡ »ı¼ºµÇ¾ú½À´Ï´Ù! :) " << endl;
+		cout << "Â°Â´ÃƒÂ¼Â°Â¡ Â»Ã½Â¼ÂºÂµÃ‡Â¾ÃºÂ½Ã€Â´ÃÂ´Ã™! :) " << endl;
 	}
 
 	SelfRef& Adder(int n) {
