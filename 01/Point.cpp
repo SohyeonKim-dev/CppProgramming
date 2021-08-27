@@ -12,7 +12,7 @@ int Point::GetY() const { return y; }
 
 bool Point::SetX(int xpos) {
 	if (0 > xpos || xpos > 100) {
-		cout << "¹ş¾î³­ ¹üÀ§ÀÇ °ª Àü´Ş" << endl;
+		cout << "ë²—ì–´ë‚œ ë²”ìœ„ì˜ ê°’ ì „ë‹¬" << endl;
 		return false;
 	}
 	x = xpos;
@@ -21,7 +21,7 @@ bool Point::SetX(int xpos) {
 
 bool Point::SetY(int ypos) {
 	if (0 > ypos || ypos > 100) {
-		cout << "¹ş¾î³­ ¹üÀ§ÀÇ °ª Àü´Ş" << endl;
+		cout << "ë²—ì–´ë‚œ ë²”ìœ„ì˜ ê°’ ì „ë‹¬" << endl;
 		return false;
 	}
 	y = ypos;
