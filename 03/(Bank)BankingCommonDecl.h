@@ -1,7 +1,7 @@
 /*
-ÆÄÀÏ ÀÌ¸§: (Bank) Account.cpp
-ÀÛ¼ºÀÚ: ±è¼ÒÇö
-¾÷µ¥ÀÌÆ® Á¤º¸: [2021, 08, 24] ÆÄÀÏ ¹öÀü 0.1
+íŒŒì¼ ì´ë¦„: (Bank) Account.cpp
+ìž‘ì„±ìž: ê¹€ì†Œí˜„
+ì—…ë°ì´íŠ¸ ì •ë³´: [2021, 08, 24] íŒŒì¼ ë²„ì „ 0.1
 */
 
 #ifndef __BANKING_COMMON_h__
@@ -13,13 +13,13 @@
 using namespace std;
 const int NAME_LEN = 20;
 
-//ÇÁ·Î±×·¥ »ç¿ëÀÚÀÇ ¼±ÅÃ ¸Þ´º
+//í”„ë¡œê·¸ëž¨ ì‚¬ìš©ìžì˜ ì„ íƒ ë©”ë‰´
 enum {MAKE = 1, DEPOSIT, WITHDRAW, INQUIRE, EXIT};
 
-//½Å¿ë µî±Þ
+//ì‹ ìš© ë“±ê¸‰
 enum {LEVEL_A=7, LEVEL_B = 4, LEVEL_C = 2};
 
-//°èÁÂÀÇ Á¾·ù
+//ê³„ì¢Œì˜ ì¢…ë¥˜
 enum {NORMAL=1, CREDIT=2};
 
 # endif
