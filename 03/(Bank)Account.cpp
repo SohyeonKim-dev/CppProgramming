@@ -1,12 +1,12 @@
 /*
-ÆÄÀÏ ÀÌ¸§: (Bank) Account.cpp
-ÀÛ¼ºÀÚ: ±è¼ÒÇö
-¾÷µ¥ÀÌÆ® Á¤º¸: [2021, 08, 24] ÆÄÀÏ ¹öÀü 0.1
+íŒŒì¼ ì´ë¦„: (Bank) Account.cpp
+ì‘ì„±ì: ê¹€ì†Œí˜„
+ì—…ë°ì´íŠ¸ ì •ë³´: [2021, 08, 24] íŒŒì¼ ë²„ì „ 0.1
 */
 
 # define _CRT_SECURE_NO_WARNINGS
 # include "(Bank)Account.h"
-# include "(Bank)BankingCommonDecl.h" // ¿©±â¿¡ <iostream>, <cstring> Æ÷ÇÔµÇ¾î ÀÖÀ½
+# include "(Bank)BankingCommonDecl.h" // ì—¬ê¸°ì— <iostream>, <cstring> í¬í•¨ë˜ì–´ ìˆìŒ
 
 Account::Account(int ID, int money, char* name)
 	: accID(ID), balance(money) {
@@ -36,9 +36,9 @@ int Account::Withdraw(int money) {
 }
 
 void Account::ShowAccInfo() const {
-	cout << "°èÁÂID: " << accID << endl;
-	cout << "ÀÌ  ¸§: " << cusName << endl;
-	cout << "ÀÜ  ¾×: " << balance << endl;
+	cout << "ê³„ì¢ŒID: " << accID << endl;
+	cout << "ì´  ë¦„: " << cusName << endl;
+	cout << "ì”  ì•¡: " << balance << endl;
 }
 
 Account::~Account() {
